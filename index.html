@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Tech Marketer — Messaging & Content for Tech Startups</title>
+<meta name="description" content="Tech startup marketer helping web3 and SaaS founders communicate clearly and convert. Messaging, landing page copy, content and founder-led brand.">
+<meta property="og:title" content="The Tech Marketer — Penned by JB">
+<meta property="og:description" content="Complex tech. Simple words. Real customers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ec;--fg:#0d0d0f;--mute:rgba(13,13,15,.62);--card:rgba(255,255,255,.55);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:"Inter Tight",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+nav{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
+nav b{font-weight:800;letter-spacing:-.02em}
+.pill{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:11px 20px;border-radius:99px;background:var(--fg);color:var(--bg)}
+.pill.o{background:transparent;border:1.5px solid var(--fg);color:var(--fg)}
+section{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:100px 22px;overflow:hidden}
+.big{position:absolute;left:50%;top:50%;font-weight:800;letter-spacing:-.06em;line-height:.8;white-space:nowrap;font-size:clamp(5.5rem,27vw,25rem);z-index:1;pointer-events:none;will-change:transform;transform:translate(-50%,-50%)}
+.big.front{z-index:6;color:transparent;-webkit-text-stroke:2px var(--fg)}
+.txt{position:relative;z-index:4;max-width:1100px;margin:0 auto;width:100%}
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--mute)}
+h1,h2{font-weight:800;letter-spacing:-.045em;line-height:.98}
+h1{font-size:clamp(2.4rem,7vw,5.4rem)}
+h2{font-size:clamp(2rem,5.6vw,4.2rem)}
+.lead{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--mute);max-width:520px;margin-top:20px;line-height:1.45}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+#nib{position:fixed;left:50%;top:50%;z-index:3;width:clamp(150px,21vw,270px);pointer-events:none;will-change:transform,opacity;filter:drop-shadow(0 40px 40px rgba(0,0,0,.28)) drop-shadow(0 8px 10px rgba(0,0,0,.18))}
+.hero .txt{align-self:flex-start;margin-top:auto}
+.hero{justify-content:flex-end;padding-bottom:70px}
+.hero .txt{margin-top:0}
+.rail{position:relative;z-index:4;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 22px 20px;margin:0 -22px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(78vw,340px);scroll-snap-align:center;min-height:46vh;border-radius:28px;background:var(--card);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.7);padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.card .no{font-size:.85rem;font-weight:700;color:var(--mute)}
+.card h3{font-size:1.9rem;letter-spacing:-.04em;line-height:1;font-weight:800}
+.card p{color:var(--mute);margin-top:10px;line-height:1.4}
+.ba{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
+.ba div{border-radius:28px;padding:28px;background:var(--card);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.ba small{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--mute)}
+.ba p{font-size:clamp(1.25rem,2.6vw,1.8rem);font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-top:12px}
+.ba .after{background:var(--fg);color:var(--bg)}.ba .after small{color:inherit;opacity:.6}
+.steps{display:grid;gap:0;margin-top:30px;border-top:1.5px solid var(--fg)}
+.step{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:22px 0;border-bottom:1.5px solid var(--fg);align-items:baseline}
+.step b{font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.04em}
+.step span{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--mute)}
+.step em{font-style:normal;color:var(--fg);font-weight:800;display:block;font-size:clamp(1.5rem,3.4vw,2.4rem);letter-spacing:-.04em}
+.mq{position:absolute;bottom:26px;left:0;white-space:nowrap;z-index:2;font-weight:800;font-size:clamp(1rem,2vw,1.3rem);opacity:.5;animation:m 26s linear infinite}
+
+#bar{position:fixed;top:0;left:0;height:3px;background:var(--fg);z-index:30;width:0}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;padding:8px 14px;border-radius:99px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin-bottom:18px}
+.badge i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{padding:12px 20px;border-radius:99px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:700;letter-spacing:-.02em}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tab{font:inherit;font-weight:700;padding:10px 18px;border-radius:99px;border:1.5px solid var(--fg);background:transparent;color:var(--fg);cursor:pointer}
+.tab[aria-selected=true]{background:var(--fg);color:var(--bg)}
+.panel{margin-top:18px;border-radius:28px;padding:28px;background:var(--card);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);max-width:680px;line-height:1.5}
+.panel[hidden]{display:none}
+.panel small{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--mute)}
+.panel p{margin-top:12px}.panel .h{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.q{margin-top:26px;max-width:640px}
+.q .qt{font-size:clamp(1.3rem,3vw,2rem);font-weight:800;letter-spacing:-.035em;line-height:1.1;min-height:2.3em}
+.q .ans{display:flex;gap:10px;margin-top:18px}
+.q .prog{font-size:.85rem;font-weight:700;color:var(--mute)}
+.res{font-size:clamp(1.6rem,4vw,2.8rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.faq{margin-top:26px;max-width:760px}
+details{border-bottom:1.5px solid var(--fg);padding:18px 0}
+summary{cursor:pointer;font-weight:800;font-size:clamp(1.1rem,2.2vw,1.4rem);letter-spacing:-.03em;list-style:none}
+summary::after{content:"+";float:right}details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:10px;line-height:1.5}
+form{display:grid;gap:12px;text-align:left;max-width:640px;margin:28px auto 0}
+form .two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--fg);background:var(--card);border:1.5px solid var(--fg);border-radius:16px;padding:14px 16px;outline:none}
+select option{color:#111}
+textarea{min-height:96px;resize:vertical}
+#sent{display:none;margin-top:14px;font-weight:700}
+#brief{width:100%;min-height:120px;margin-top:10px;font-size:14px}
+button.pill{border:0;font:inherit;font-weight:700;cursor:pointer}
+.stick{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);z-index:25;transition:transform .4s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.stick.on{transform:translate(-50%,0)}
+@keyframes m{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><b>The Tech Marketer</b><a class="pill" href="https://x.com/pennedbyjb_" target="_blank" rel="noopener">Let's talk</a></nav>
+
+<svg id="nib" viewBox="0 0 200 330" aria-hidden="true">
+<defs>
+<linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#8d939f"/><stop offset=".28" stop-color="#ffffff"/><stop offset=".55" stop-color="#c9ced8"/><stop offset=".8" stop-color="#f4f6fa"/><stop offset="1" stop-color="#7b818e"/></linearGradient>
+<linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1c20"/><stop offset="1" stop-color="#050506"/></linearGradient>
+</defs>
+<path d="M78 0h44l6 86H72z" fill="url(#k)"/>
+<path d="M72 86h56C160 150 178 215 158 262L100 326 42 262C22 215 40 150 72 86z" fill="url(#m)"/>
+<path d="M100 150v150" stroke="#1a1a1e" stroke-width="3" stroke-linecap="round"/>
+<circle cx="100" cy="146" r="10" fill="#1a1a1e"/>
+<path d="M62 120C48 170 46 215 58 250" stroke="#fff" stroke-width="5" fill="none" opacity=".8" stroke-linecap="round"/>
+<text x="100" y="226" font-family="Inter Tight,Arial" font-weight="800" font-size="20" text-anchor="middle" fill="#2a2a30" opacity=".55">JB</text>
+</svg>
+
+<section class="hero" data-w="1">
+<div class="big" data-dir="1">Clarity</div>
+<div class="txt">
+<div class="badge"><i></i>Open for new projects</div><div class="eyebrow">Tech startup marketer · Web3 fluent</div>
+<h1 style="margin-top:14px">Complex tech.<br>Simple words.<br>Real customers.</h1>
+<p class="lead">I write the messaging, pages and content that make founders understood, trusted and chosen.</p>
+<div class="row"><a class="pill" href="https://x.com/pennedbyjb_" target="_blank" rel="noopener">Start a conversation</a><a class="pill o" href="#services">What I do</a></div>
+</div></section>
+
+<section>
+<div class="big front" data-dir="-1">Convert</div>
+<div class="txt" style="text-align:right;margin-right:0">
+<div class="eyebrow">The problem</div>
+<h2 style="margin-top:14px;margin-left:auto;max-width:760px">Great products lose to clearer ones.</h2>
+<p class="lead" style="margin-left:auto">If a visitor can't say what you do in five seconds, they're gone. I fix that first.</p>
+</div></section>
+
+
+<section>
+<div class="big" data-dir="1">Founders</div>
+<div class="txt"><div class="eyebrow">Who I work with</div><h2 style="margin-top:14px">Built for teams with real tech and a message that's lagging behind it.</h2>
+<div class="chips"><span class="chip">Web3 &amp; crypto protocols</span><span class="chip">AI &amp; SaaS startups</span><span class="chip">Pre-launch founders</span><span class="chip">Product-led teams</span></div>
+<p class="lead">Not a fit: brands that want volume over clarity, or copy by committee. Best fit: founders who want a sharp point of view and can move fast.</p></div></section>
+
+<section id="services">
+<div class="big" data-dir="1">Craft</div>
+<div class="txt"><div class="eyebrow">What I do</div><h2 style="margin-top:14px">Four ways in.</h2></div>
+<div class="rail">
+<div class="card"><span class="no">01</span><div><h3>Positioning &amp; Messaging</h3><p>One sharp promise, one audience, one story your whole team repeats.</p></div></div>
+<div class="card"><span class="no">02</span><div><h3>Landing Page Copy</h3><p>Launch and product pages written to move people to act.</p></div></div>
+<div class="card"><span class="no">03</span><div><h3>Content Engine</h3><p>Threads, posts and newsletters that turn ideas into inbound.</p></div></div>
+<div class="card"><span class="no">04</span><div><h3>Founder-Led Brand</h3><p>Your voice, systemised, so you show up daily without the grind.</p></div></div>
+</div></section>
+
+<section>
+<div class="big" data-dir="-1">Rewrite</div>
+<div class="txt"><div class="eyebrow">Sample teardown</div><h2 style="margin-top:14px">Same product. Different first impression.</h2>
+<div class="ba">
+<div><small>Before</small><p>“A decentralized, modular, cross-chain liquidity protocol powered by next-gen infrastructure.”</p></div>
+<div class="after"><small>After</small><p>“Move money across chains in one click. No bridges to learn, no fees to guess.”</p></div>
+</div>
+<p class="lead" style="font-size:.95rem">Illustrative example of how I work.</p></div></section>
+
+
+<section id="samples">
+<div class="big" data-dir="1">Proof</div>
+<div class="txt"><div class="eyebrow">Writing samples · spec work</div><h2 style="margin-top:14px">See how I write before you hire me.</h2>
+<div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-t="0">X thread</button><button class="tab" role="tab" aria-selected="false" data-t="1">Landing hero</button><button class="tab" role="tab" aria-selected="false" data-t="2">Launch email</button></div>
+<div class="panel" data-p="0"><small>Thread · what is account abstraction?</small><p class="h">Your crypto wallet shouldn't feel like defusing a bomb.</p><p>1/ Today, one wrong copy-paste can cost you everything.<br>2/ Account abstraction makes wallets behave like apps you already use.<br>3/ Recover access without a 12-word panic. Pay fees in the token you hold.<br>4/ Same security. A tenth of the anxiety. That's why it matters.</p></div>
+<div class="panel" data-p="1" hidden><small>Landing hero · fictional wallet</small><p class="h">A wallet as easy as your banking app. Safer than a vault.</p><p>Send, save and recover in seconds. No seed phrase stress, no hidden fees.<br><b>Create your wallet →</b></p></div>
+<div class="panel" data-p="2" hidden><small>Launch email · fictional SaaS</small><p class="h">Subject: Your reports just got 10x faster</p><p>Hi Sam, you told us reporting eats your Fridays. Today we're launching one-click reports that finish in seconds. Try it on your next dashboard, and get your Friday back.</p></div>
+<p class="lead" style="font-size:.9rem">Fictional brands, written to show my thinking. Real client work will appear here.</p></div></section>
+
+<section id="check">
+<div class="big" data-dir="-1">Test</div>
+<div class="txt"><div class="eyebrow">Free · 30 seconds</div><h2 style="margin-top:14px">Is your message costing you customers?</h2>
+<div class="q" id="quiz"><div class="prog" id="qp"></div><div class="qt" id="qt"></div><div class="ans"><button class="pill" id="yes">Yes</button><button class="pill o" id="no">Not really</button></div></div></div></section>
+<section>
+<div class="big" data-dir="1">Ship</div>
+<div class="txt"><div class="eyebrow">Process</div>
+<div class="steps">
+<div class="step"><b>01</b><span><em>Discover</em>A short call to learn your product, buyer and goal.</span></div>
+<div class="step"><b>02</b><span><em>Draft</em>First messaging and copy in days, not weeks.</span></div>
+<div class="step"><b>03</b><span><em>Refine</em>We tune it until it sounds exactly like you.</span></div>
+<div class="step"><b>04</b><span><em>Launch</em>Publish-ready assets and a guide to use them.</span></div>
+</div></div></section>
+
+
+<section>
+<div class="big" data-dir="1">Why</div>
+<div class="txt"><div class="eyebrow">About</div><h2 style="margin-top:14px">I saw brilliant tech lose to clearer competitors.</h2>
+<p class="lead">I spent weeks publishing web3 explainers. It proved one thing: people buy what they understand. So I moved into tech startup marketing, and I'm documenting every step in public.</p>
+<div class="chips"><span class="chip">Clarity over clever</span><span class="chip">Outcomes over output</span><span class="chip">Learn and ship in public</span></div>
+<div class="row"><a class="pill o" href="https://x.com/pennedbyjb_" target="_blank" rel="noopener">Follow the journey</a></div></div></section>
+
+<section id="faq">
+<div class="txt"><div class="eyebrow">FAQ</div><h2 style="margin-top:14px">Before you reach out.</h2>
+<div class="faq">
+<details><summary>Do you understand technical and web3 products?</summary><p>Yes. I write web3 explainers publicly and turn technical ideas into language buyers act on.</p></details>
+<details><summary>How do you charge?</summary><p>Every project is scoped to your goal. After a short call you get a clear proposal, with no surprises.</p></details>
+<details><summary>How fast can we start?</summary><p>Most projects kick off within days of the first conversation.</p></details>
+<details><summary>What do you need from me?</summary><p>Access to your product, any existing docs, and a short call so I can capture your voice.</p></details>
+<details><summary>What if I don't love the first draft?</summary><p>We align on direction before I write, and revisions are part of every project.</p></details>
+</div></div></section>
+
+<section id="cta" style="text-align:center"><span id="contact" style="position:absolute;top:0"></span>
+<div class="big" data-dir="-1" style="opacity:.14">Hello</div>
+<div class="txt"><h2 style="font-size:clamp(2.4rem,8vw,6.5rem)">Let's make your message impossible to ignore.</h2>
+<p class="lead" style="margin:20px auto 0">Tell me about your project. I'll reply with a free, honest messaging teardown.</p>
+<form id="f"><div class="two"><input id="n" placeholder="Your name" required><input id="h" placeholder="X handle or email" required></div>
+<input id="u" placeholder="Product link (optional)">
+<div class="two"><select id="s"><option>Stage: Idea</option><option>Stage: Pre-launch</option><option>Stage: Live, growing</option><option>Stage: Scaling</option></select>
+<select id="d"><option>Need: Messaging</option><option>Need: Landing page</option><option>Need: Content</option><option>Need: Founder brand</option><option>Need: Not sure yet</option></select></div>
+<select id="t"><option>Timeline: ASAP</option><option>Timeline: within 30 days</option><option>Timeline: 1 to 3 months</option></select>
+<textarea id="g" placeholder="What's the goal? What's not working?"></textarea>
+<button class="pill" type="submit" style="padding:16px">Send my brief on X</button>
+<div id="sent">Brief copied. Paste it in the DM that just opened. If it didn't copy, use the box below.<textarea id="brief" readonly></textarea></div></form></div>
+<div class="mq">THE TECH MARKETER · PENNED BY JB · THE TECH MARKETER · PENNED BY JB · THE TECH MARKETER · PENNED BY JB · THE TECH MARKETER · PENNED BY JB ·</div>
+</section>
+
+<a class="pill stick" id="stick" href="#contact">Get a free teardown</a>
+<script>
+(function(){
+var S=[[0,'#f3f1ec'],[.12,'#f4d8d0'],[.26,'#a8cdf0'],[.4,'#efe8da'],[.55,'#f0d9e6'],[.7,'#cfe3c8'],[.82,'#efe8da'],[.92,'#1a1a22'],[1,'#0d0d0f']];
+var K=[[0,0,0,14,1,1],[.09,24,0,-12,.85,1],[.19,-24,-4,38,.95,1],[.3,0,0,10,.5,.12],[.5,0,0,0,.5,.1],[.58,22,2,-28,.9,.9],[.68,-20,0,20,.8,.4],[.8,0,0,0,.5,.1],[.92,0,0,90,.6,.1],[1,0,6,180,1.1,.16]];
+var nib=document.getElementById('nib'),bigs=[].slice.call(document.querySelectorAll('.big')),root=document.documentElement;
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function hex(c){return[1,3,5].map(function(i){return parseInt(c.substr(i,2),16)})}
+function sm(t){return t*t*(3-2*t)}
+function seg(a,p){for(var i=0;i<a.length-1;i++){if(p<=a[i+1][0]){return[i,sm((p-a[i][0])/(a[i+1][0]-a[i][0]))]}}return[a.length-2,1]}
+function mix(a,b,t){return a+(b-a)*t}
+var cur=0;
+function frame(){
+var max=document.documentElement.scrollHeight-innerHeight,t=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
+cur=reduce?t:cur+(t-cur)*.09;var p=cur,vw=innerWidth,vh=innerHeight;
+var s=seg(K,p),a=K[s[0]],b=K[s[0]+1],f=s[1];
+var k=Math.min(1,vw/900)*.75+.25;
+nib.style.transform='translate(-50%,-50%) translate('+mix(a[1],b[1],f)*vw/100*k+'px,'+mix(a[2],b[2],f)*vh/100+'px) rotate('+mix(a[3],b[3],f)+'deg) scale('+mix(a[4],b[4],f)+')';
+nib.style.opacity=mix(a[5],b[5],f);
+var c=seg(S,p),c1=hex(S[c[0]][1]),c2=hex(S[c[0]+1][1]),m=[0,1,2].map(function(i){return Math.round(mix(c1[i],c2[i],c[1]))});
+root.style.setProperty('--bg','rgb('+m+')');
+var L=(.299*m[0]+.587*m[1]+.114*m[2])/255;
+if(L<.45){root.style.setProperty('--fg','#f3f1ec');root.style.setProperty('--mute','rgba(243,241,236,.65)');root.style.setProperty('--card','rgba(255,255,255,.08)')}
+else{root.style.setProperty('--fg','#0d0d0f');root.style.setProperty('--mute','rgba(13,13,15,.62)');root.style.setProperty('--card','rgba(255,255,255,.55)')}
+bigs.forEach(function(e){var r=e.parentNode.getBoundingClientRect(),q=(vh-r.top)/(vh+r.height);
+e.style.transform='translate(-50%,-50%) translateX('+((q-.5)*-(+e.dataset.dir)*70)+'vw)'});
+requestAnimationFrame(frame)}
+frame();
+
+var bar=document.getElementById('bar'),st=document.getElementById('stick');
+addEventListener('scroll',function(){var m=document.documentElement.scrollHeight-innerHeight;bar.style.width=(scrollY/m*100)+'%';st.classList.toggle('on',scrollY>innerHeight*.8&&scrollY<m-innerHeight*.9)},{passive:true});
+var tabs=[].slice.call(document.querySelectorAll('.tab')),pn=[].slice.call(document.querySelectorAll('.panel'));
+tabs.forEach(function(b){b.onclick=function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});pn.forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t})}});
+var Q=['Can a stranger say what you do within 5 seconds?','Does your headline name exactly who it is for?','Do you lead with a benefit, not a feature list?','Is there one clear call to action above the fold?','Do you post consistently about the problem you solve?'],qi=0,sc=0,qt=document.getElementById('qt'),qp=document.getElementById('qp');
+function showQ(){qp.textContent='Question '+(qi+1)+' of '+Q.length;qt.textContent=Q[qi]}
+function done(){var r=sc<=1?'Your message is leaking customers.':sc<=3?'Good bones. Conversions are leaking.':'Strong base. Let\'s sharpen and scale it.';
+document.getElementById('quiz').innerHTML='<div class="prog">Your score: '+sc+' / 5</div><div class="res" style="margin:12px 0 18px">'+r+'</div><a class="pill" href="#contact">Get my free teardown</a>';window.__score=sc+'/5'}
+function ans(y){if(y)sc++;qi++;qi<Q.length?showQ():done()}
+document.getElementById('yes').onclick=function(){ans(1)};document.getElementById('no').onclick=function(){ans(0)};showQ();
+document.getElementById('f').onsubmit=function(e){e.preventDefault();var v=function(i){return document.getElementById(i).value};
+var t='Hi JB, I found your portfolio.\nName: '+v('n')+'\nContact: '+v('h')+'\nProduct: '+(v('u')||'n/a')+'\n'+v('s')+'\n'+v('d')+'\n'+v('t')+'\nGoal: '+(v('g')||'n/a')+(window.__score?'\nClarity score: '+window.__score:'');
+var b=document.getElementById('brief');b.value=t;document.getElementById('sent').style.display='block';
+try{navigator.clipboard.writeText(t)}catch(x){}
+window.open('https://x.com/pennedbyjb_','_blank','noopener')};
+})();
+</script>
+</body>
+</html>
